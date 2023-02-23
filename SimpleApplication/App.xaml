@@ -1,0 +1,14 @@
+﻿<!-- 
+    Copyright Axon Enterprise, Inc (c) 2022
+    Licensed for use to Axon partners with active Axon NDA
+-->
+<Application x:Class="SimpleApplication.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:SimpleApplication"
+             >
+    <!--MainWindow.xaml">StartupUri="OnStartup"-->
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>

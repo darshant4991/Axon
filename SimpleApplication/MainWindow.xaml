@@ -1,0 +1,111 @@
+﻿<!-- 
+    Copyright Axon Enterprise, Inc (c) 2022
+    Licensed for use to Axon partners with active Axon NDA
+-->
+
+<Window x:Class="SimpleApplication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SimpleApplication"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="9*"/>
+        </Grid.RowDefinitions>
+    <TabControl x:Name="MainTabControl" Grid.Row="1">
+            <TabItem Header="Animals">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="8*"/>
+                        <RowDefinition Height="2*"/>
+                    </Grid.RowDefinitions>
+                    <!--Darshan Starts-->
+                    <!--<ListBox x:Name="AnimalsList" Width="600" Height="250"></ListBox>-->
+                    <DataGrid x:Name="AnimalsGrid" Width="600" Height="250" AutoGenerateColumns="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Name" Binding="{Binding API}"/>
+                            <DataGridTextColumn Header="Description" Binding="{Binding Description}"/>
+                            <DataGridTextColumn Header="Link" Binding="{Binding Link}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <!--Darshan Ends-->
+                    <Button Content="Get Animal APIs" Grid.Row="1" Width="100" Height="35" Click="GetAnimalAPIs_Click"/>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Weather">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="8*"/>
+                        <RowDefinition Height="2*"/>
+                    </Grid.RowDefinitions>
+                    <!--Darshan Starts-->
+                    <!--<ListBox x:Name="WeatherList" Width="600" Height="250"></ListBox></ListBox>-->
+                    <DataGrid x:Name="WeatherGrid" Width="600" Height="250" AutoGenerateColumns="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Name" Binding="{Binding API}"/>
+                            <DataGridTextColumn Header="Description" Binding="{Binding Description}"/>
+                            <DataGridTextColumn Header="Link" Binding="{Binding Link}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <!--Darshan Ends-->
+                    <Button Content="Get Weather APIs" Grid.Row="1" Width="100" Height="35" Click="GetWeatherAPIs_Click"/>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Video">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="8*"/>
+                        <RowDefinition Height="2*"/>
+                    </Grid.RowDefinitions>
+                    <!--Darshan Starts-->
+                    <!--<ListBox x:Name="VideoList" Width="600" Height="250"></ListBox></ListBox>-->
+                    <DataGrid x:Name="VideoGrid" Width="600" Height="250" AutoGenerateColumns="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Name" Binding="{Binding API}"/>
+                            <DataGridTextColumn Header="Description" Binding="{Binding Description}"/>
+                            <DataGridTextColumn Header="Link" Binding="{Binding Link}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <!--Darshan Ends-->
+                    <Button Content="Get Video APIs" Grid.Row="1" Width="100" Height="35" Click="GetVideoAPIs_Click"/>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Health">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="8*"/>
+                        <RowDefinition Height="2*"/>
+                    </Grid.RowDefinitions>
+                    <!--Darshan Starts-->
+                    <!--<ListBox x:Name="HealthList" Width="600" Height="250"></ListBox></ListBox>-->
+                    <DataGrid x:Name="HealthGrid" Width="600" Height="250" AutoGenerateColumns="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Name" Binding="{Binding API}"/>
+                            <DataGridTextColumn Header="Description" Binding="{Binding Description}"/>
+                            <DataGridTextColumn Header="Link" Binding="{Binding Link}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <!--Darshan Ends-->
+                    <Button Content="Get Health APIs" Grid.Row="1" Width="100" Height="35" Click="GetHealthAPIs_Click"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <Label Content="Current Time:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="CurrentTimeLabel" HorizontalAlignment="Left" Margin="100,10,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
